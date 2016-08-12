@@ -31,7 +31,9 @@ public Result Execute(ExternalCommandData commandData, ref string message, Eleme
 {
    message = "Please take attention on the highlighted Walls!";
    //先从UI选取元素，然后执行该插件
+   //This method has be outdated 2015. Need to use the GetElement, SetElement method;
    ElementSet elems = commandData.Application.ActiveUIDocument.Selection.Elements;
+
    foreach (Element elem in elems)
    {
       Wall wall = elem as Wall;
